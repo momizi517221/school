@@ -1,454 +1,622 @@
-  
+  <title>学校案内</title>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    </head>
+    
+    <img id="haikei" src="re.png">
+    <img id="white" src="white.png">
+    
+    <div class="center" >
+      <img id="titleImg" src="titleImg.png">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+      <div class="line line4"></div>
+      <div class="line line5"></div>
+      <img id="container" src="han2.png">
+      <img id="handle" src="han.png">
+      <img id="gatya1" src="gatya1.png">
+      <img id="gatya2" src="gatya2.png">
+      <button id="btn"></button>
+    </div>
   
-  <img id="haikei" src="re.png">
-  <img id="white" src="white.png">
-  
-  <div class="center" >
-    <img id="titleImg" src="titleImg.png">
-    <div class="line line1"></div>
-    <div class="line line2"></div>
-    <div class="line line3"></div>
-    <div class="line line4"></div>
-    <div class="line line5"></div>
-    <img id="container" src="han2.png">
-    <img id="handle" src="han.png">
-    <img id="gatya1" src="gatya1.png">
-    <img id="gatya2" src="gatya2.png">
-    <button id="btn"></button>
-  </div>
+</div>
+<img id="item" src="item.png">
+<h1 id="h1">【マップ】と【文化祭の予定】</h1>
+<h1 id="h2">を手に入れた！！</h1>
 
 
 
+<h1 id="title">気になる情報をタップ！！</h1>
+
+<div id="content">
+<div id="c1">
+<a href="晴天時マップ.html" id="content1">晴天時マップ</a>
+</div>
+<div id="c2">
+<a href="雨天時マップ.html" id="content2">雨天時マップ</a>
+</div>
+<div id="c3">
+<a href="１日目.html" id="content3">１日目次第</a>
+</div>
+<div id="c4">
+<a href="２日目.html" id="content4">２日目次第</a>
+</div>
+<div id="c5">
+<a href="選択.html" id="content5">クラスの出し物</a>
+</div>
+</div>
   
-  <style>
-  
-  body {
-    margin:0px;
-    touch-action: manipulation;
-    overflow:hidden;
-     
-  }
-  
-  #white{
-    position:absolute;
-    background-color:white;
-    width:100%;
-    height:100%;
-    opacity:0;
-  }
-  
-  #haikei{
-    position:absolute;
-    width:100vw;
-    height:100vh;
-    display:block;
-  }
-  
-  .center {/*画像中央配置*/
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-  }
-  
-  #titleImg {/*タイトル*/
-    position: absolute;
-    top: 7vh;
-    width:90vw;
-    z-index: 1;
-    display:block;
-  }
-  
-  #container {/*ハンドル以外のガチャの外観*/
-    position: absolute;
-    width: 80vw;
-    height: auto;
-    margin-top:45vh;
-    display:block;
-  }
-  
-  #handle{/*ハンドル*/
-    position: absolute;
-    width:30vh;
-    margin-top:62vh;
-    display:block;
-  }
-  
-  #gatya1{
-    position:absolute;
+    
+    <style>
+    
+    body {
+      margin:0px;
+      touch-action: manipulation;
+      overflow:hidden;
+       
+    }
+    
+    #white{
+      position:absolute;
+      background-color:white;
+      width:100%;
+      height:100%;
+      opacity:0;
+    }
+    
+    #haikei{
+      position:absolute;
+      width:100vw;
+      height:100vh;
+      display:block;
+    }
+    
+    .center {/*画像中央配置*/
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+    
+    #titleImg {/*タイトル*/
+      position: absolute;
+      top: 7vh;
+      width:90vw;
+      z-index: 1;
+      display:block;
+    }
+    
+    #container {/*ハンドル以外のガチャの外観*/
+      position: absolute;
+      width: 80vw;
+      height: auto;
+      margin-top:45vh;
+      display:block;
+    }
+    
+    #handle{/*ハンドル*/
+      position: absolute;
+      width:30vh;
+      margin-top:62vh;
+      display:block;
+    }
+    
+    #gatya1{
+      position:absolute;
+      width:60vw;
+      margin-top:60vh;
+      opacity:0;
+    }
+    #gatya2{
+      position:absolute;
+      width:60vw;
+      margin-top:60vh;
+      opacity:0;
+    }
+    
+    #btn{/*ボタン*/
+      position: absolute;
+      background-image: url('btm.png');
+      background-size: 20vh; /* 画像をボタンのサイズに合わせる */
+      background-repeat: no-repeat; /* 画像を繰り返さないように設定 */
+      margin-top:120vh;
+      width:36vw;
+      height:7vh;
+    }
+    
+    .line {
+      width: 0;
+      height: 0;
+      border-left: 10vh solid transparent; 
+      border-right: 10vw solid transparent;
+      border-bottom: 90vw solid rgba(255, 255, 255, 0.7);
+      position: absolute;
+      top: 70vh;
+      left:30vh;
+      transform-origin: 10vw 0;
+      z-index: 1;
+      opacity:0;
+      display:none;
+    }
+    
+    .line2 {
+    }
+    
+    .line3 {
+    }
+    
+    .line4 {
+    }
+    
+    .line5 {
+    }
+    
+    
+    @keyframes rotateHandle {/*ハンドルを回す*/
+      0% {
+        transform: rotate(0); 
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes fadeUp {/*外見をフェード*/
+      0% {
+        transform: translateY(0);
+        opacity: 1; /* 透明度を0からスタート */
+      }
+      100% {
+        transform: translateY(-350px);
+        opacity: 0; /* 透明度を1に変更（完全に不透明） */
+      }
+    }
+    
+    @keyframes fadeDown {/*外見をフェード*/
+      0% {
+        transform: translateY(0);
+        opacity: 0; /* 透明度を0からスタート */
+      }
+      100% {
+        transform: translateY(10vh);
+        opacity: 1; /* 透明度を1に変更（完全に不透明） */
+      }
+    }
+    
+    @keyframes slideRight {/*カプセルを開く*/
+      0% {
+        transform: rotate(0); 
+      }
+      100% {
+        transform-origin: center bottom;
+        transform: rotate(50deg);
+      }
+    }
+    
+    @keyframes slideLeft {/*カプセルを開く*/
+      0% {
+        transform: rotate(0); 
+      }
+      100% {
+        transform-origin: center bottom;
+        transform: rotate(-50deg);
+        
+      }
+    }
+    
+    @keyframes rotateLine {
+      0% {
+        transform: translate(-10vw, 0) rotate(0deg);
+        opacity: 0; 
+      }
+      25% {
+        opacity: 1; 
+      }
+      100% {
+        transform: translate(-10vw, 0) rotate(370deg);
+      }
+    }
+    
+    @keyframes rotateLine2 {
+      0% {
+        transform: translate(-10vw, 0) rotate(70deg);
+        opacity: 0; 
+      }
+      25% {
+        ransform: translate(-10vw, 0) rotate(200deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-10vw, 0) rotate(470deg); 
+      }
+    }
+    
+    @keyframes rotateLine3 {
+      0% {
+        transform: translate(-10vw, 0) rotate(290deg);
+        opacity: 0; 
+      }
+      25%{
+        opacity: 1; 
+      }
+      100% {
+        transform: translate(-10vw, 0) rotate(720deg);
+      }
+    }
+    
+    @keyframes rotateLine4 {
+      0% {
+        transform: translate(-10vw, 0) rotate(130deg);
+        opacity: 0; 
+      }
+      25%{
+        opacity: 1; 
+      }
+      100% {
+        transform: translate(-10vw, 0) rotate(620deg);
+      }
+    }
+    
+    @keyframes rotateLine5 {
+      0% {
+        transform: translate(-10vw, 0) rotate(200deg);
+        opacity: 0; /* 透明度を0からスタート */
+      }
+      25%{
+        transform: translate(-10vw, 0) rotate(400deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-10vw, 0) rotate(510deg);
+      }
+    }
+    
+    @keyframes whitefade {/*外見をフェード*/
+      0%{
+        opacity: 0; /* 透明度を0からスタート */
+      }
+      100% {
+        opacity: 1; /* 透明度を1に変更（完全に不透明） */
+      }
+    }
+    
+    @keyframes fadeee {/*外見をフェード*/
+      0%{
+        opacity: 1; /* 透明度を0からスタート */
+      }
+      100% {
+        opacity: 0; /* 透明度を1に変更（完全に不透明） */
+      }
+    }
+    
+    .animateLine {
+      animation: rotateLine 6s linear infinite;
+    }
+    .animateLine2 {
+      animation: rotateLine2 6s linear infinite;
+    }
+    .animateLine3 {
+      animation: rotateLine3 6s linear infinite;
+    }
+    .animateLine4 {
+      animation: rotateLine4 6s linear infinite;
+    }
+    .animateLine5 {
+      animation: rotateLine5 6s linear infinite;
+    }
+    
+    .animateHandle{
+        animation: rotateHandle 2s
+    }
+    
+    .animateFadeDown {
+      animation: fadeDown 3s;
+    }
+    
+    .animateFadeUp {
+      animation: fadeUp 3s;
+    }
+    
+    .animateSlideRight {
+      animation: slideRight 2s;
+    }
+    
+    .animateSlideLeft {
+      animation: slideLeft 2s;
+    }
+    
+    .animateWhiteFade {
+      animation: whitefade 5s;
+    }
+    
+    .animateFadeee {
+      animation: fadeee 5s;
+    }
+    
+    #item{
+    position:relative;
     width:60vw;
-    margin-top:60vh;
-    opacity:0;
-  }
-  #gatya2{
-    position:absolute;
-    width:60vw;
-    margin-top:60vh;
-    opacity:0;
-  }
-  
-  #btn{/*ボタン*/
-    position: absolute;
-    background-image: url('btm.png');
-    background-size: 20vh; /* 画像をボタンのサイズに合わせる */
-    background-repeat: no-repeat; /* 画像を繰り返さないように設定 */
-    margin-top:120vh;
-    width:36vw;
-    height:7vh;
-  }
-  
-  .line {
-    width: 0;
-    height: 0;
-    border-left: 10vh solid transparent; 
-    border-right: 10vw solid transparent;
-    border-bottom: 90vw solid rgba(255, 255, 255, 0.7);
-    position: absolute;
-    top: 70vh;
-    left:30vh;
-    transform-origin: 10vw 0;
-    z-index: 1;
-    opacity:0;
+    top:-30vh;
+    left:20vw;
     display:none;
   }
   
-  .line2 {
+  #h1{
+    position:relative;
+    font-size:6vw;
+    margin-top:-25vh;
+    left:9vw;
+    width:90vw;
+    display:none;
   }
-  
-  .line3 {
+  #h2{
+    position:relative;
+    margin-top:0;
+    font-size:6vw;
+    left:27vw;
+    width:60vw;
+    display:none;
   }
+
+
+
+
+  #title{
+    position:relative;
+    background-color:green;
+  top:-45vh;
+  left:0;
+  font-size:4vh;
+  display: none;
+
+}
+#content{
+
+  position:relative;
+  margin-top:-35vh;
+  text-align:center;
+  display: none;
   
-  .line4 {
-  }
-  
-  .line5 {
-  }
-  
-  
-  @keyframes rotateHandle {/*ハンドルを回す*/
-    0% {
-      transform: rotate(0); 
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes fadeUp {/*外見をフェード*/
-    0% {
-      transform: translateY(0);
-      opacity: 1; /* 透明度を0からスタート */
-    }
-    100% {
-      transform: translateY(-350px);
-      opacity: 0; /* 透明度を1に変更（完全に不透明） */
-    }
-  }
-  
-  @keyframes fadeDown {/*外見をフェード*/
-    0% {
-      transform: translateY(0);
-      opacity: 0; /* 透明度を0からスタート */
-    }
-    100% {
-      transform: translateY(10vh);
-      opacity: 1; /* 透明度を1に変更（完全に不透明） */
-    }
-  }
-  
-  @keyframes slideRight {/*カプセルを開く*/
-    0% {
-      transform: rotate(0); 
-    }
-    100% {
-      transform-origin: center bottom;
-      transform: rotate(50deg);
-    }
-  }
-  
-  @keyframes slideLeft {/*カプセルを開く*/
-    0% {
-      transform: rotate(0); 
-    }
-    100% {
-      transform-origin: center bottom;
-      transform: rotate(-50deg);
+  font-size:6vw;
+  left:25vw;
+ 
+}
+
+#content a {
+  text-decoration: none; /* 下線を削除 */
+  color: black; /* リンクの色を変更 */
+}
+
+
+#c1{
+  width:50vw;
+  height:5vh;
+  background-color:rgba(255,251,170,1);
+}
+#c2{
+  margin-top:10vh;
+  width:50vw;
+  height:5vh;
+  background-color:rgba(255,251,170,1);
+}
+#c3{
+  margin-top:10vh;
+  width:50vw;
+  height:5vh;
+  background-color:rgba(255,251,170,1);
+}
+#c4{
+  margin-top:10vh;
+  width:50vw;
+  height:5vh;
+  background-color:rgba(255,251,170,1);
+}
+
+#c5{
+  margin-top:10vh;
+  width:50vw;
+  height:5vh;
+  background-color:rgba(255,251,170,1);
+}
+    
+    </style>
+    
+    <script>
+    
+    let phase = 0
+    
+    let title = document.getElementById("titleImg");
+    let btn = document.getElementById("btn");
+    let handle = document.getElementById("handle");
+    let container = document.getElementById("container");
+    let gatya1 = document.getElementById("gatya1");
+    let gatya2 = document.getElementById("gatya2");
+    let line1 = document.getElementsByClassName("line");
+    let line2 = document.getElementsByClassName("line2");
+    let line3 = document.getElementsByClassName("line3");
+    let line4 = document.getElementsByClassName("line4");
+    let line5 = document.getElementsByClassName("line5");
+    let white = document.getElementById("white");
+    
+    let haikei = document.getElementById("haikei");
+
+    
+  let item = document.getElementById("item");
+  let h1 = document.getElementById("h1");
+  let h2 = document.getElementById("h2");
+
+
+
+  let titleM =  document.getElementById("title");
+  let content =  document.getElementById("content");
+
+    
+    document.getElementById("btn").onclick = function() {
+      handle.classList.add("animateHandle");
+    
+      setTimeout(function(){
+        gatya1.classList.add("animateFadeDown");
+        gatya2.classList.add("animateFadeDown");
+      }, 2500);
+    
+      setTimeout(function(){
+        container.classList.add("animateFadeUp");
+        handle.classList.add("animateFadeUp");
+      }, 2500);
+    
+      container.addEventListener("animationend", function() {
+        container.style.display = "none"
+        handle.style.display = "none"
+        gatya1.style.opacity = 1;
+        gatya2.style.opacity = 1;
+        gatya1.style.marginTop = "80vh"
+        gatya2.style.marginTop = "80vh"
+    
+        gatya1.classList.add("animateSlideLeft");
+        gatya2.classList.add("animateSlideRight");
+    
+        gatya2.addEventListener("animationend", function() {
+    
+          setTimeout(function(){
+    
+        for (let i = 0; i < line1.length; i++) {
+          line1[i].classList.add("animateLine");
+          line1[i].style.display = "block"
+        }
+        for (let i = 0; i < line2.length; i++) {
+          line2[i].classList.add("animateLine2");
+          line1[i].style.display = "block"
+        }
+        for (let i = 0; i < line3.length; i++) {
+          line3[i].classList.add("animateLine3");
+          line1[i].style.display = "block"
+        }
+        for (let i = 0; i < line4.length; i++) {
+          line4[i].classList.add("animateLine4");
+          line1[i].style.display = "block"
+        }
+        for (let i = 0; i < line5.length; i++) {
+          line5[i].classList.add("animateLine5");
+          line1[i].style.display = "block"
+        }
+    
+      }, 1700);
+    
+      setTimeout(function(){
+        gatya1.style.display = "none"
+        gatya2.style.display = "none"
+      }, 1600);
+    
+      setTimeout(function(){
+        white.classList.add("animateWhiteFade");
+        title.classList.add("animateFadeee");
+        btn.classList.add("animateFadeee");
+    
+        btn.addEventListener("animationend", function() {
+        title.style.display = "none"
+        btn.style.display = "none"
+        haikei.style.display = "none"
+    
+        
+        for (let i = 0; i < line1.length; i++) {
+          line1[i].classList.add("animateLine");
+          line1[i].style.display = "none"
+        }
+        for (let i = 0; i < line2.length; i++) {
+          line2[i].classList.add("animateLine2");
+          line1[i].style.display = "none"
+        }
+        for (let i = 0; i < line3.length; i++) {
+          line3[i].classList.add("animateLine3");
+          line1[i].style.display = "none"
+        }
+        for (let i = 0; i < line4.length; i++) {
+          line4[i].classList.add("animateLine4");
+          line1[i].style.display = "none"
+        }
+        for (let i = 0; i < line5.length; i++) {
+          line5[i].classList.add("animateLine5");
+          line1[i].style.display = "none"
+        }
+    
+        phase = 1
+        
+        });
+
+       
+       
+      }, 2000);
       
-    }
-  }
-  
-  @keyframes rotateLine {
-    0% {
-      transform: translate(-10vw, 0) rotate(0deg);
-      opacity: 0; 
-    }
-    25% {
-      opacity: 1; 
-    }
-    100% {
-      transform: translate(-10vw, 0) rotate(370deg);
-    }
-  }
-  
-  @keyframes rotateLine2 {
-    0% {
-      transform: translate(-10vw, 0) rotate(70deg);
-      opacity: 0; 
-    }
-    25% {
-      ransform: translate(-10vw, 0) rotate(200deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translate(-10vw, 0) rotate(470deg); 
-    }
-  }
-  
-  @keyframes rotateLine3 {
-    0% {
-      transform: translate(-10vw, 0) rotate(290deg);
-      opacity: 0; 
-    }
-    25%{
-      opacity: 1; 
-    }
-    100% {
-      transform: translate(-10vw, 0) rotate(720deg);
-    }
-  }
-  
-  @keyframes rotateLine4 {
-    0% {
-      transform: translate(-10vw, 0) rotate(130deg);
-      opacity: 0; 
-    }
-    25%{
-      opacity: 1; 
-    }
-    100% {
-      transform: translate(-10vw, 0) rotate(620deg);
-    }
-  }
-  
-  @keyframes rotateLine5 {
-    0% {
-      transform: translate(-10vw, 0) rotate(200deg);
-      opacity: 0; /* 透明度を0からスタート */
-    }
-    25%{
-      transform: translate(-10vw, 0) rotate(400deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translate(-10vw, 0) rotate(510deg);
-    }
-  }
-  
-  @keyframes whitefade {/*外見をフェード*/
-    0%{
-      opacity: 0; /* 透明度を0からスタート */
-    }
-    100% {
-      opacity: 1; /* 透明度を1に変更（完全に不透明） */
-    }
-  }
-  
-  @keyframes fadeee {/*外見をフェード*/
-    0%{
-      opacity: 1; /* 透明度を0からスタート */
-    }
-    100% {
-      opacity: 0; /* 透明度を1に変更（完全に不透明） */
-    }
-  }
-  
-  .animateLine {
-    animation: rotateLine 6s linear infinite;
-  }
-  .animateLine2 {
-    animation: rotateLine2 6s linear infinite;
-  }
-  .animateLine3 {
-    animation: rotateLine3 6s linear infinite;
-  }
-  .animateLine4 {
-    animation: rotateLine4 6s linear infinite;
-  }
-  .animateLine5 {
-    animation: rotateLine5 6s linear infinite;
-  }
-  
-  .animateHandle{
-      animation: rotateHandle 2s
-  }
-  
-  .animateFadeDown {
-    animation: fadeDown 3s;
-  }
-  
-  .animateFadeUp {
-    animation: fadeUp 3s;
-  }
-  
-  .animateSlideRight {
-    animation: slideRight 2s;
-  }
-  
-  .animateSlideLeft {
-    animation: slideLeft 2s;
-  }
-  
-  .animateWhiteFade {
-    animation: whitefade 5s;
-  }
-  
-  .animateFadeee {
-    animation: fadeee 5s;
-  }
-  
-  
-  </style>
-  
-  <script>
-  
-  let phase = 0
-  
-  let title = document.getElementById("titleImg");
-  let btn = document.getElementById("btn");
-  let handle = document.getElementById("handle");
-  let container = document.getElementById("container");
-  let gatya1 = document.getElementById("gatya1");
-  let gatya2 = document.getElementById("gatya2");
-  let line1 = document.getElementsByClassName("line");
-  let line2 = document.getElementsByClassName("line2");
-  let line3 = document.getElementsByClassName("line3");
-  let line4 = document.getElementsByClassName("line4");
-  let line5 = document.getElementsByClassName("line5");
-  let white = document.getElementById("white");
-  
-  let haikei = document.getElementById("haikei");
-  
-  document.getElementById("btn").onclick = function() {
-    handle.classList.add("animateHandle");
-  
-    setTimeout(function(){
-      gatya1.classList.add("animateFadeDown");
-      gatya2.classList.add("animateFadeDown");
-    }, 2500);
-  
-    setTimeout(function(){
-      container.classList.add("animateFadeUp");
-      handle.classList.add("animateFadeUp");
-    }, 2500);
-  
-    container.addEventListener("animationend", function() {
-      container.style.display = "none"
-      handle.style.display = "none"
-      gatya1.style.opacity = 1;
-      gatya2.style.opacity = 1;
-      gatya1.style.marginTop = "80vh"
-      gatya2.style.marginTop = "80vh"
-  
-      gatya1.classList.add("animateSlideLeft");
-      gatya2.classList.add("animateSlideRight");
-  
-      gatya2.addEventListener("animationend", function() {
-  
-        setTimeout(function(){
-  
-      for (let i = 0; i < line1.length; i++) {
-        line1[i].classList.add("animateLine");
-        line1[i].style.display = "block"
-      }
-      for (let i = 0; i < line2.length; i++) {
-        line2[i].classList.add("animateLine2");
-        line1[i].style.display = "block"
-      }
-      for (let i = 0; i < line3.length; i++) {
-        line3[i].classList.add("animateLine3");
-        line1[i].style.display = "block"
-      }
-      for (let i = 0; i < line4.length; i++) {
-        line4[i].classList.add("animateLine4");
-        line1[i].style.display = "block"
-      }
-      for (let i = 0; i < line5.length; i++) {
-        line5[i].classList.add("animateLine5");
-        line1[i].style.display = "block"
-      }
-  
-    }, 1700);
-  
-    setTimeout(function(){
-      gatya1.style.display = "none"
-      gatya2.style.display = "none"
-    }, 1600);
-  
-    setTimeout(function(){
-      white.classList.add("animateWhiteFade");
-      title.classList.add("animateFadeee");
-      btn.classList.add("animateFadeee");
-  
-      btn.addEventListener("animationend", function() {
-      title.style.display = "none"
-      btn.style.display = "none"
-      haikei.style.display = "none"
-  
       
-      for (let i = 0; i < line1.length; i++) {
-        line1[i].classList.add("animateLine");
-        line1[i].style.display = "none"
-      }
-      for (let i = 0; i < line2.length; i++) {
-        line2[i].classList.add("animateLine2");
-        line1[i].style.display = "none"
-      }
-      for (let i = 0; i < line3.length; i++) {
-        line3[i].classList.add("animateLine3");
-        line1[i].style.display = "none"
-      }
-      for (let i = 0; i < line4.length; i++) {
-        line4[i].classList.add("animateLine4");
-        line1[i].style.display = "none"
-      }
-      for (let i = 0; i < line5.length; i++) {
-        line5[i].classList.add("animateLine5");
-        line1[i].style.display = "none"
-      }
-  
-      phase = 1;
-      
+    
       });
-     
-      
-     
-    }, 2000);
-    
-  
-    
-  
     });
-  });
-  
-  }
-  
-  
-  function Timer(){
-    if(phase == 1){
+    
+    }
+    
+    
+    function Timer(){
+ 
    
+
+ if(phase == 1){
+   document.body.style.backgroundColor = "rgba(255,251,179,1)";
+   item.style.display = "block"
+   h1.style.display = "block"
+   h2.style.display = "block"
+
+   setTimeout(function(){
+     haikei.style.display ="block"
+     item.style.display = "none"
+   h1.style.display = "none"
+   h2.style.display = "none"
+   phase = 2
+ }, 1600);
+
+}
+
+if(phase == 2){
+ titleM.style.display = "block"
+  content.style.display = "block"
+
+  titleImg.style.display = "none"
+  handle.style.display = "none"
+  container.style.display = "none"
+  btn.style.display = "none"
+}
+}
+
+setInterval( Timer, 33)
+
+// コードの最後に挿入します
+
+// ページ読み込み時にlocalStorageからphaseの値を取得する
+window.onload = function() {
+  const storedPhase = localStorage.getItem('phase');
+  if (storedPhase !== null) {
+    phase = parseInt(storedPhase);
   }
-  }
-  
-  setInterval( Timer, 33)
-  
-  
-  
-  </script>
-  </body>
+}
+
+// phaseの値が変更された際にlocalStorageに保存する
+function savePhaseValue() {
+  localStorage.setItem('phase', phase);
+}
+
+// タイマーごとにphaseの変更を監視し、変更があれば保存する
+setInterval(function() {
+  Timer();
+  savePhaseValue();
+}, 33);
+
+
+
+
+    
+    </script>
+    </body>

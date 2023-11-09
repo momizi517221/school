@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+</head>
+<body>
+
+    <img id="haikei" src="re.png">
+
+<button id="ff">１階</button>
+<button id="ss">２階</button>
+<button id="tt">３階</button>
+<button id="oo">外</button>
+
+<img id="f" src="１階.png">
+<img id="s" src="２階.png">
+<img id="t" src="３階.png">
+<img id="o" src="外.png">
+
+
+<style>
+    body {
+      margin: 0;
+      touch-action: manipulation;
+      overflow: hidden;
+    }
+
+    #haikei {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #f, #s, #t, #o {
+        position: relative;
+        width: 45vh;
+        top: 5vh;
+        left: 7vh;
+        display: none;
+    }
+
+    #ff, #ss, #tt, #oo {
+        position: relative;
+        width: 15vw;
+        height: 10vh;
+        font-size: 5vw;
+    }
+    
+    
+</style>
+
+<script>
+    let f = document.getElementById("f");
+    let s = document.getElementById("s");
+    let t = document.getElementById("t");
+    let o = document.getElementById("o");
+
+    document.getElementById("ff").onclick = function() {
+        f.style.display = "block";
+        s.style.display = "none";
+        t.style.display = "none";
+        o.style.display = "none";
+    }
+
+    document.getElementById("ss").onclick = function() {
+        f.style.display = "none";
+        s.style.display = "block";
+        t.style.display = "none";
+        o.style.display = "none";
+    }
+
+    document.getElementById("tt").onclick = function() {
+        f.style.display = "none";
+        s.style.display = "none";
+        t.style.display = "block";
+        o.style.display = "none";
+    }
+
+    document.getElementById("oo").onclick = function() {
+        f.style.display = "none";
+        s.style.display = "none";
+        t.style.display = "none";
+        o.style.display = "block";
+    }
+</script>
+
+</body>
+</html>

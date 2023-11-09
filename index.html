@@ -41,8 +41,8 @@ body {
 
 #haikei{
   position:absolute;
-  width:100%;
-  height:100%;
+  width:100vw;
+  height:100vh;
   display:block;
 }
 
@@ -66,38 +66,38 @@ body {
 
 #container {/*ハンドル以外のガチャの外観*/
   position: absolute;
-  width: 800px;
+  width: 100vw;
   height: auto;
-  margin-top:600px;
+  margin-top:50vh;
   display:block;
 }
 
 #handle{/*ハンドル*/
   position: absolute;
-  width:100px;
-  margin-top:1000px;
+  width:9vh;
+  margin-top:77vh;
   display:block;
 }
 
 #gatya1{
   position:absolute;
-  width:600px;
-  margin-top:900px;
+  width:70vw;
+  margin-top:60vh;
   opacity:0;
 }
 #gatya2{
   position:absolute;
-  width:600px;
-  margin-top:900px;
+  width:70vw;
+  margin-top:60vh;
   opacity:0;
 }
 
 #btn{/*ボタン*/
   position: absolute;
-  margin-top:1500px;
-  width:400px;
-  height:60px;
-  font-size:40px;
+  margin-top:120vh;
+  width:50vw;
+  height:5vh;
+  font-size:7vw;
 }
 
 
@@ -131,7 +131,7 @@ body {
     opacity: 0; /* 透明度を0からスタート */
   }
   100% {
-    transform: translateY(100px);
+    transform: translateY(10vh);
     opacity: 1; /* 透明度を1に変更（完全に不透明） */
   }
 }
@@ -181,13 +181,13 @@ body {
 .line {
             width: 0;
             height: 0;
-            border-left: 70px solid transparent;
-            border-right: 70px solid transparent;
-            border-bottom: 620px solid rgba(255, 255, 255, 0.7);
+            border-left: 10vh solid transparent;
+            border-right: 10vw solid transparent;
+            border-bottom: 90vw solid rgba(255, 255, 255, 0.7);
             position: absolute;
-            top: 950px;
-            left:50%;
-            transform-origin: 50% 0;
+            top: 70vh;
+            left:30vh;
+            transform-origin: 10vw 0;
             z-index: 1;
             opacity:0;
             display:none;
@@ -195,14 +195,14 @@ body {
 
         @keyframes rotateLine {
             0% {
-                transform: translate(-50%, 0) rotate(0deg);
+                transform: translate(-10vw, 0) rotate(0deg);
                 opacity: 0; 
             }
             25%{
               opacity: 1; 
             }
             100% {
-                transform: translate(-50%, 0) rotate(370deg);
+                transform: translate(-10vw, 0) rotate(370deg);
             }
         }
 
@@ -212,15 +212,15 @@ body {
 
         @keyframes rotateLine2 {
             0% {
-                transform: translate(-50%, 0) rotate(70deg);
+                transform: translate(-10vw, 0) rotate(70deg);
                 opacity: 0; 
             }
             25%{
-                transform: translate(-50%, 0) rotate(200deg);
+                transform: translate(-10vw, 0) rotate(200deg);
                 opacity: 1;
             }
             100% {
-                transform: translate(-50%, 0) rotate(470deg); 
+                transform: translate(-10vw, 0) rotate(470deg); 
             }
         }
 
@@ -230,14 +230,14 @@ body {
 
         @keyframes rotateLine3 {
             0% {
-                transform: translate(-50%, 0) rotate(290deg);
+                transform: translate(-10vw, 0) rotate(290deg);
                 opacity: 0; 
             }
             25%{
               opacity: 1; 
             }
             100% {
-                transform: translate(-50%, 0) rotate(720deg);
+                transform: translate(-10vw, 0) rotate(720deg);
             }
         }
 
@@ -247,14 +247,14 @@ body {
 
         @keyframes rotateLine4 {
             0% {
-                transform: translate(-50%, 0) rotate(130deg);
+                transform: translate(-10vw, 0) rotate(130deg);
                 opacity: 0; 
             }
             25%{
               opacity: 1; 
             }
             100% {
-                transform: translate(-50%, 0) rotate(620deg);
+                transform: translate(-10vw, 0) rotate(620deg);
             }
         }
 
@@ -264,15 +264,15 @@ body {
 
         @keyframes rotateLine5 {
             0% {
-                transform: translate(-50%, 0) rotate(200deg);
+                transform: translate(-10vw, 0) rotate(200deg);
                 opacity: 0; /* 透明度を0からスタート */
             }
             25%{
-                transform: translate(-50%, 0) rotate(400deg);
+                transform: translate(-10vw, 0) rotate(400deg);
                 opacity: 1;
             }
             100% {
-                transform: translate(-50%, 0) rotate(510deg);
+                transform: translate(-10vw, 0) rotate(510deg);
       
             }
         }
@@ -361,8 +361,8 @@ document.getElementById("btn").onclick = function() {
     handle.style.display = "none"
     gatya1.style.opacity = 1;
     gatya2.style.opacity = 1;
-    gatya1.style.marginTop = "1100px"
-    gatya2.style.marginTop = "1100px"
+    gatya1.style.marginTop = "80vh"
+    gatya2.style.marginTop = "80vh"
 
     gatya1.classList.add("animateSlideLeft");
     gatya2.classList.add("animateSlideRight");
